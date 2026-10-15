@@ -4,7 +4,7 @@
   'use strict';
 
   var CONTACT = {
-    phone: '+91 240 6625613 / 4',
+    phone: '+91 240 6625613',
     tel: '+912406625613',
     email: 'info@macpl.com',
     cin: 'U29130MH1988PTC046951',
