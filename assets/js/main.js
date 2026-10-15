@@ -214,7 +214,7 @@
 
     // Prev / next pager
     var pager = document.createElement('nav');
-    pager.className = 'panel pager';
+    pager.className = 'pager';
     pager.setAttribute('aria-label', 'Section navigation');
     main.appendChild(pager);
 
@@ -235,8 +235,8 @@
       var i = ids.indexOf(id);
       var prev = i > 0 ? subLinks[i - 1] : null, next = i < ids.length - 1 ? subLinks[i + 1] : null;
       pager.innerHTML =
-        (prev ? '<a class="pager-prev" href="#' + ids[i - 1] + '"><small>Previous</small>‹ ' + prev.textContent + '</a>' : '<span></span>') +
-        (next ? '<a class="pager-next" href="#' + ids[i + 1] + '"><small>Next</small>' + next.textContent + ' ›</a>' : '<span></span>');
+        (prev ? '<a class="btn btn--ghost btn--prev" href="#' + ids[i - 1] + '">' + prev.textContent + '</a>' : '') +
+        (next ? '<a class="btn btn--next" href="#' + ids[i + 1] + '">Next: ' + next.textContent + '</a>' : '');
     };
 
     var fromHash = function () {

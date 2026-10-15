@@ -582,10 +582,9 @@ p { margin: 0 0 1em; }
 
 /* Section tabs */
 [hidden] { display: none !important; }
-.pager { display: flex; justify-content: space-between; gap: 16px; padding: 18px 24px; }
-.pager a { display: flex; flex-direction: column; font: 700 15px var(--font-head); color: var(--blue); padding: 10px 16px; border: 1px solid var(--line); min-width: 0; }
-.pager a:hover { border-color: var(--orange); color: var(--orange); }
-.pager small { font: 700 11px var(--font-head); text-transform: uppercase; letter-spacing: 1.5px; color: var(--ink-soft); }
-.pager-next { text-align: right; margin-left: auto; }
-.pager-prev { border-left: 4px solid var(--blue) !important; }
-.pager-next { border-right: 4px solid var(--orange) !important; }
+.pager { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: -4px; }
+.pager .btn--next { margin-left: auto; }
+.btn--prev { clip-path: none; background: #fff; }
+.btn--prev::after { content: none; }
+.btn--prev::before { content: "‹"; font-size: 20px; line-height: 0; }
+@media (max-width: 640px) { .pager .btn { flex: 1 1 100%; justify-content: center; } .pager .btn--next { order: -1; } }
